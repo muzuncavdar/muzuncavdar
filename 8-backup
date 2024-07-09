@@ -1,0 +1,20 @@
+// Adım 1:
+// os modülünü import et.
+const os = require('os')
+// Adım 2:
+// Mevcut kullanıcı hakkında bilgi al ve bu bilgiyi konsola yazdır.
+const user = os.userInfo()
+console.log(user)
+// Adım 3:
+// Sistemin çalışma süresini (uptime) saniye cinsinden al ve konsola yazdır.
+console.log(`The system uptime is ${os.uptime()}`)
+// Adım 4:
+// Mevcut işletim sistemi hakkında bazı bilgileri bir nesneye aktar ve bu nesneyi konsola yazdır.
+const currentSystemInformation = {
+    type: os.type(),
+    release: os.release(),
+    totalmem: os.totalmem(),
+    freemem: os.freemem()
+}
+console.log(currentSystemInformation)
+// Bu adımları takip ederek kodunu yazabilirsin. Hazır olduğunda, kodu çalıştırmak için terminalde node app.js komutunu kullan.
